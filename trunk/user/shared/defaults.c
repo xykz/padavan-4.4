@@ -56,7 +56,7 @@ struct nvram_pair router_defaults[] = {
 	{ "lan_dns_x", "1" },			/* LAN DNS [static|dhcp] */
 	{ "lan_dns1", "" },			/* LAN DNS1 */
 	{ "lan_dns2", "" },			/* LAN DNS2 */
-	{ "lan_domain", "lan" },		/* LAN domain name */
+	{ "lan_domain", "home.arpa" },		/* LAN domain name */
 	{ "lan_stp", "1" },			/* LAN spanning tree protocol */
 
 	/* WAN H/W parameters */
@@ -155,7 +155,7 @@ struct nvram_pair router_defaults[] = {
 	{ "https_clist", DEF_HTTPS_CIPH_LIST },	/* HTTPS SSL cipher list */
 	{ "fw_dos_x", "0" },			// oleg patch
 	{ "dr_enable_x", "1" },			// oleg patch
-	{ "mr_enable_x", "0" },			// oleg patch
+	{ "mr_enable_x", "1" },			// oleg patch
 	{ "mr_qleave_x", "1" },
 
 #if BOARD_HAS_5G_RADIO
@@ -419,7 +419,7 @@ struct nvram_pair router_defaults[] = {
 	{ "hdd_spindt", "0" },
 	{ "hdd_apmoff", "0" },
 
-	{ "ip6_service", "dhcp6" },			/* IPV6 */
+	{ "ip6_service", "" },			/* IPV6 */
 	{ "ip6_wan_if", "0" },
 
 	{ "ip6_6in4_remote", "" },
@@ -453,7 +453,7 @@ struct nvram_pair router_defaults[] = {
 	{ "upnp_enable_x", "1" },
 	{ "upnp_proto", "0" },
 	{ "upnp_secure", "1" },
-	{ "upnp_clean_min", "10" },
+	{ "upnp_clean_min", "100" },
 	{ "upnp_clean_int", "600" },
 	{ "upnp_iport_min", "21" },
 	{ "upnp_iport_max", "65535" },
@@ -1053,7 +1053,7 @@ struct nvram_pair router_defaults[] = {
 #endif
 	{ "fw_syn_cook", "0" },
 	{ "fw_mac_drop", "0" },
-	{ "nf_nat_type", "2" },
+	{ "nf_nat_type", "1" },
 	{ "nf_nat_loop", "1" },
 #if (BOARD_RAM_SIZE > 128)
 	{ "nf_max_conn", "32768" },
@@ -1077,7 +1077,7 @@ struct nvram_pair router_defaults[] = {
 	{ "vpns_mppe", "1" },
 	{ "vpns_mtu", "1450" },
 	{ "vpns_mru", "1450" },
-	{ "vpns_vuse", "0" },
+	{ "vpns_vuse", "2" },
 	{ "vpns_vnet", "10.8.0.0" },
 	{ "vpns_actl", "0" },
 	{ "vpns_cli0", "245" },
